@@ -7,7 +7,7 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: ".",
-      output: "_site",
+      output: "docs",
       // ここを直下の _includes に変更
       includes: "_includes" 
     }

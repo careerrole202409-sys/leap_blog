@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【知財戦略】海外展開の羅針盤！中小企業のためのブランド・技術の守り方完全ガイド - 株式会社Leap | 海外代理店営業の伴走ツール</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+line-height: 1.8;
+color: #2d3748;
+background-color: #f7fafc;
+}
+/* ヘッダー */
+header {
+background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+color: white;
+padding: 1rem 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+.header-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo {
+font-size: 1.5rem;
+font-weight: 700;
+text-decoration: none;
+color: white;
+}
+.menu-toggle {
+display: none;
+background: none;
+border: none;
+color: white;
+font-size: 1.8rem;
+cursor: pointer;
+padding: 0.5rem;
+}
+nav {
+display: flex;
+align-items: center;
+gap: 2rem;
+}
+nav ul {
+list-style: none;
+display: flex;
+gap: 2rem;
+}
+nav a {
+color: white;
+text-decoration: none;
+font-weight: 500;
+transition: opacity 0.3s;
+font-size: 0.95rem;
+}
+nav a:hover {
+opacity: 0.8;
+}
+.cta-button {
+background: white;
+color: #C10033;
+padding: 0.6rem 1.2rem;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 700;
+transition: all 0.3s;
+box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+display: inline-block;
+border: 2px solid white;
+font-size: 0.9rem;
+}
+.cta-button:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+background: rgba(255, 255, 255, 0.95);
+}
+/* パンくずリスト */
+.breadcrumb {
+max-width: 900px;
+margin: 2rem auto 0;
+padding: 0 2rem;
+display: flex;
+gap: 0.5rem;
+flex-wrap: wrap;
+font-size: 0.9rem;
+color: #718096;
+}
+.breadcrumb a {
+color: #4a5568;
+text-decoration: none;
+transition: color 0.3s;
+}
+.breadcrumb a:hover {
+color: #C10033;
+}
+.breadcrumb span {
+color: #cbd5e0;
+}
+/* 記事ヘッダー */
+.article-header {
+max-width: 900px;
+margin: 2rem auto;
+padding: 0 2rem;
+}
+.article-category {
+display: inline-block;
+background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+color: white;
+padding: 0.4rem 1rem;
+border-radius: 20px;
+font-size: 0.85rem;
+font-weight: 700;
+margin-bottom: 1.5rem;
+box-shadow: 0 2px 8px rgba(193, 0, 51, 0.3);
+}
+.article-title {
+font-size: 2.5rem;
+font-weight: 700;
+color: #1a202c;
+line-height: 1.3;
+margin-bottom: 1.5rem;
+}
+.article-meta {
+display: flex;
+gap: 2rem;
+flex-wrap: wrap;
+padding: 1.5rem 0;
+border-bottom: 2px solid #e2e8f0;
+color: #718096;
+font-size: 0.95rem;
+}
+.article-meta span {
+display: flex;
+align-items: center;
+gap: 0.4rem;
+}
+.author-info {
+display: flex;
+align-items: center;
+gap: 1rem;
+margin-top: 1.5rem;
+}
+.author-avatar {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: #e2e8f0;
+}
+.author-details h4 {
+color: #1a202c;
+font-weight: 600;
+margin-bottom: 0.2rem;
+}
+.author-details p {
+color: #718096;
+font-size: 0.9rem;
+}
+/* アイキャッチ画像 */
+.featured-image {
+max-width: 900px;
+margin: 2rem auto;
+padding: 0 2rem;
+}
+.featured-image img {
+width: 100%;
+height: auto;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+/* 記事コンテンツ */
+.article-content {
+max-width: 900px;
+margin: 3rem auto;
+padding: 3rem;
+background: white;
+border-radius: 12px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.article-content h2 {
+font-size: 2rem;
+color: #1a202c;
+margin: 2.5rem 0 1.5rem;
+padding-bottom: 0.5rem;
+border-bottom: 3px solid #C10033;
+}
+.article-content h3 {
+font-size: 1.5rem;
+color: #2d3748;
+margin: 2rem 0 1rem;
+}
+.article-content h4 {
+font-size: 1.2rem;
+color: #4a5568;
+margin: 1.5rem 0 0.8rem;
+}
+.article-content p {
+margin-bottom: 1.5rem;
+font-size: 1.05rem;
+line-height: 1.9;
+}
+.article-content ul,
+.article-content ol {
+margin: 1.5rem 0 1.5rem 2rem;
+}
+.article-content li {
+margin-bottom: 0.8rem;
+font-size: 1.05rem;
+}
+.article-content blockquote {
+border-left: 4px solid #C10033;
+padding: 1.5rem 2rem;
+margin: 2rem 0;
+background: #FFF0F3;
+border-radius: 0 8px 8px 0;
+font-style: italic;
+color: #4a5568;
+}
+.article-content img {
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+margin: 2rem 0;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.article-content code {
+background: #f7fafc;
+padding: 0.2rem 0.5rem;
+border-radius: 4px;
+font-family: 'Courier New', monospace;
+font-size: 0.9em;
+color: #C10033;
+}
+.article-content pre {
+background: #2d3748;
+color: #e2e8f0;
+padding: 1.5rem;
+border-radius: 8px;
+overflow-x: auto;
+margin: 2rem 0;
+}
+.article-content pre code {
+background: none;
+color: inherit;
+padding: 0;
+}
+/* ハイライトボックス */
+.highlight-box {
+background: #FFF0F3;
+border-left: 4px solid #C10033;
+padding: 1.5rem;
+margin: 2rem 0;
+border-radius: 0 8px 8px 0;
+}
+.highlight-box h4 {
+color: #C10033;
+margin: 0 0 1rem 0;
+}
+/* 目次 */
+.table-of-contents {
+background: #f7fafc;
+border: 2px solid #e2e8f0;
+border-radius: 8px;
+padding: 1.5rem;
+margin: 2rem 0;
+}
+.table-of-contents h3 {
+font-size: 1.2rem;
+color: #2d3748;
+margin: 0 0 1rem 0;
+}
+.table-of-contents ul {
+list-style: none;
+margin: 0;
+}
+.table-of-contents li {
+margin-bottom: 0.5rem;
+}
+.table-of-contents a {
+color: #4a5568;
+text-decoration: none;
+transition: color 0.3s;
+}
+.table-of-contents a:hover {
+color: #C10033;
+}
+/* タグセクション */
+.article-tags {
+max-width: 900px;
+margin: 2rem auto;
+padding: 0 2rem;
+}
+.tags-container {
+display: flex;
+gap: 0.8rem;
+flex-wrap: wrap;
+}
+.tag {
+background: #FFF0F3;
+color: #C10033;
+padding: 0.5rem 1.2rem;
+border-radius: 20px;
+font-size: 0.9rem;
+font-weight: 600;
+text-decoration: none;
+transition: all 0.3s;
+}
+.tag:hover {
+background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+color: white;
+transform: translateY(-2px);
+}
+/* シェアボタン */
+.share-section {
+max-width: 900px;
+margin: 3rem auto;
+padding: 2rem;
+background: white;
+border-radius: 12px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.share-section h3 {
+font-size: 1.3rem;
+margin-bottom: 1rem;
+color: #1a202c;
+}
+.share-buttons {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+.share-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 60px;
+height: 60px;
+border: none;
+border-radius: 50%;
+cursor: pointer;
+transition: transform 0.3s;
+padding: 0;
+}
+.share-btn:hover {
+transform: translateY(-2px);
+}
+.share-btn svg {
+width: 32px;
+height: 32px;
+fill: white;
+}
+.share-btn.twitter {
+background: #1da1f2;
+}
+.share-btn.facebook {
+background: #4267B2;
+}
+.share-btn.linkedin {
+background: #0077b5;
+}
+.share-btn.copy {
+background: #718096;
+color: white;
+font-size: 1.5rem;
+}
+/* 関連記事 */
+.related-posts {
+max-width: 1200px;
+margin: 4rem auto;
+padding: 0 2rem;
+}
+.related-posts h2 {
+font-size: 2rem;
+color: #1a202c;
+margin-bottom: 2rem;
+text-align: center;
+}
+.related-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+}
+.related-card {
+background: white;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+transition: transform 0.3s, box-shadow 0.3s;
+cursor: pointer;
+text-decoration: none;
+color: inherit;
+}
+.related-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.related-card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+.related-card-content {
+padding: 1.5rem;
+}
+.related-card h3 {
+font-size: 1.2rem;
+color: #1a202c;
+margin-bottom: 0.8rem;
+line-height: 1.4;
+}
+.related-card p {
+color: #718096;
+font-size: 0.9rem;
+}
+/* CTA セクション */
+.cta-section {
+max-width: 900px;
+margin: 4rem auto;
+padding: 3rem 2rem;
+background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+border-radius: 12px;
+text-align: center;
+color: white;
+}
+.cta-section h2 {
+font-size: 2rem;
+margin-bottom: 1rem;
+}
+.cta-section p {
+font-size: 1.1rem;
+margin-bottom: 2rem;
+opacity: 0.9;
+}
+.cta-section .cta-button {
+display: inline-block;
+padding: 1rem 2.5rem;
+background: white;
+color: #C10033;
+font-weight: 700;
+border-radius: 8px;
+text-decoration: none;
+transition: transform 0.3s;
+}
+.cta-section .cta-button:hover {
+transform: scale(1.05);
+}
+/* フッター */
+footer {
+background: #2d2d2d;
+color: white;
+padding: 3rem 2rem;
+margin-top: 4rem;
+}
+.footer-content {
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+}
+.footer-section h3 {
+margin-bottom: 1rem;
+color: white;
+font-weight: 700;
+}
+.footer-section ul {
+list-style: none;
+}
+.footer-section li {
+margin-bottom: 0.5rem;
+}
+.footer-section a {
+color: #cbd5e0;
+text-decoration: none;
+transition: color 0.3s;
+}
+.footer-section a:hover {
+color: #C10033;
+}
+.footer-bottom {
+text-align: center;
+margin-top: 2rem;
+padding-top: 2rem;
+border-top: 1px solid #4a5568;
+color: #a0aec0;
+}
+/* レスポンシブ */
+@media (max-width: 1024px) {
+.header-container {
+padding: 0 1.5rem;
+}
+.article-header,
+.featured-image,
+.article-content,
+.article-tags,
+.share-section,
+.cta-section {
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+}
+.article-title {
+font-size: 2.2rem;
+}
+.article-content {
+padding: 2.5rem 2rem;
+}
+.article-content h2 {
+font-size: 1.8rem;
+}
+.article-content h3 {
+font-size: 1.4rem;
+}
+.related-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (max-width: 768px) {
+body {
+font-size: 16px;
+}
+.header-container {
+padding: 0 1rem;
+}
+.logo {
+font-size: 1.3rem;
+}
+.menu-toggle {
+display: block;
+}
+nav {
+position: fixed;
+top: 60px;
+left: -100%;
+width: 100%;
+height: calc(100vh - 60px);
+background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+flex-direction: column;
+padding: 2rem;
+gap: 0;
+transition: left 0.3s ease;
+z-index: 999;
+}
+nav.active {
+left: 0;
+}
+nav ul {
+flex-direction: column;
+gap: 0;
+width: 100%;
+}
+nav ul li {
+width: 100%;
+padding: 1rem 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+nav ul li a {
+font-size: 1.1rem;
+display: block;
+}
+.cta-button {
+margin-top: 1.5rem;
+text-align: center;
+display: block;
+width: 100%;
+font-size: 1rem;
+padding: 0.8rem 1.5rem;
+}
+.breadcrumb {
+padding: 0 1rem;
+font-size: 0.85rem;
+margin: 1.5rem auto 0;
+}
+.article-header {
+padding: 0 1rem;
+margin: 1.5rem auto;
+}
+.article-category {
+font-size: 0.8rem;
+padding: 0.3rem 0.8rem;
+margin-bottom: 1rem;
+}
+.article-title {
+font-size: 1.6rem;
+line-height: 1.4;
+margin-bottom: 1rem;
+}
+.article-meta {
+flex-direction: column;
+gap: 0.8rem;
+padding: 1rem 0;
+font-size: 0.9rem;
+}
+.author-info {
+margin-top: 1rem;
+}
+.author-avatar {
+width: 45px;
+height: 45px;
+}
+.author-details h4 {
+font-size: 0.95rem;
+}
+.author-details p {
+font-size: 0.85rem;
+}
+.featured-image {
+padding: 0 1rem;
+margin: 1.5rem auto;
+}
+.featured-image img {
+border-radius: 8px;
+}
+.article-content {
+padding: 2rem 1.5rem;
+margin: 2rem auto;
+}
+.article-content h2 {
+font-size: 1.5rem;
+margin: 2rem 0 1rem;
+}
+.article-content h3 {
+font-size: 1.3rem;
+margin: 1.5rem 0 0.8rem;
+}
+.article-content h4 {
+font-size: 1.1rem;
+margin: 1.2rem 0 0.6rem;
+}
+.article-content p {
+font-size: 1rem;
+line-height: 1.8;
+margin-bottom: 1.2rem;
+}
+.article-content ul,
+.article-content ol {
+margin: 1.2rem 0 1.2rem 1.5rem;
+}
+.article-content li {
+font-size: 1rem;
+margin-bottom: 0.6rem;
+}
+.article-content blockquote {
+padding: 1.2rem 1.5rem;
+margin: 1.5rem 0;
+font-size: 0.95rem;
+}
+.article-content img {
+margin: 1.5rem 0;
+border-radius: 6px;
+}
+.article-content code {
+font-size: 0.85em;
+padding: 0.2rem 0.4rem;
+}
+.article-content pre {
+padding: 1.2rem;
+margin: 1.5rem 0;
+font-size: 0.85rem;
+}
+.highlight-box {
+padding: 1.2rem;
+margin: 1.5rem 0;
+}
+.highlight-box h4 {
+font-size: 1rem;
+margin: 0 0 0.8rem 0;
+}
+.highlight-box p {
+font-size: 0.95rem;
+}
+.table-of-contents {
+padding: 1.2rem;
+margin: 1.5rem 0;
+}
+.table-of-contents h3 {
+font-size: 1.1rem;
+margin: 0 0 0.8rem 0;
+}
+.table-of-contents li {
+margin-bottom: 0.4rem;
+font-size: 0.95rem;
+}
+.article-tags {
+padding: 0 1rem;
+margin: 1.5rem auto;
+}
+.tag {
+font-size: 0.85rem;
+padding: 0.4rem 1rem;
+}
+.share-section {
+padding: 1.5rem 1rem;
+margin: 2rem auto;
+}
+.share-section h3 {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+}
+.share-buttons {
+justify-content: center;
+}
+.share-btn {
+width: 55px;
+height: 55px;
+}
+.share-btn svg {
+width: 28px;
+height: 28px;
+}
+.cta-section {
+padding: 2.5rem 1.5rem;
+margin: 3rem auto;
+}
+.cta-section h2 {
+font-size: 1.6rem;
+margin-bottom: 0.8rem;
+}
+.cta-section p {
+font-size: 1rem;
+margin-bottom: 1.5rem;
+}
+.cta-section .cta-button {
+padding: 0.9rem 2rem;
+font-size: 1rem;
+}
+.related-posts {
+padding: 0 1rem;
+margin: 3rem auto;
+}
+.related-posts h2 {
+font-size: 1.6rem;
+margin-bottom: 1.5rem;
+}
+.related-grid {
+grid-template-columns: 1fr;
+gap: 1.5rem;
+}
+.related-card h3 {
+font-size: 1.1rem;
+}
+.related-card p {
+font-size: 0.85rem;
+}
+footer {
+padding: 2.5rem 1rem;
+}
+.footer-content {
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+.footer-section h3 {
+font-size: 1.1rem;
+}
+.footer-section li {
+font-size: 0.9rem;
+}
+.footer-bottom {
+font-size: 0.85rem;
+}
+}
+@media (max-width: 480px) {
+body {
+font-size: 15px;
+}
+.logo {
+font-size: 1.2rem;
+}
+.article-title {
+font-size: 1.4rem;
+}
+.article-content {
+padding: 1.5rem 1rem;
+}
+.article-content h2 {
+font-size: 1.3rem;
+margin: 1.5rem 0 0.8rem;
+}
+.article-content h3 {
+font-size: 1.15rem;
+}
+.article-content h4 {
+font-size: 1rem;
+}
+.article-content p {
+font-size: 0.95rem;
+}
+.article-content ul,
+.article-content ol {
+margin-left: 1.2rem;
+}
+.article-content blockquote {
+padding: 1rem;
+font-size: 0.9rem;
+}
+.table-of-contents {
+padding: 1rem;
+}
+.highlight-box {
+padding: 1rem;
+}
+.share-btn {
+width: 50px;
+height: 50px;
+}
+.share-btn svg {
+width: 24px;
+height: 24px;
+}
+.cta-section h2 {
+font-size: 1.4rem;
+}
+.cta-section p {
+font-size: 0.95rem;
+}
+.related-posts h2 {
+font-size: 1.4rem;
+}
+.related-card-content {
+padding: 1.2rem;
+}
+.footer-content {
+gap: 1.5rem;
+}
+}
+@media (max-width: 360px) {
+.article-title {
+font-size: 1.3rem;
+}
+.article-content h2 {
+font-size: 1.2rem;
+}
+.article-content {
+padding: 1.2rem 0.8rem;
+}
+.share-section {
+padding: 1.2rem 0.8rem;
+}
+.cta-section {
+padding: 2rem 1rem;
+}
+}
+</style>
+</head>
+<body>
+<!-- ヘッダー -->
+<header>
+<div class="header-container">
+<a href="https://leap.site/" class="logo">Leap</a>
+<button class="menu-toggle" aria-label="メニュー">☰</button>
+<nav>
+<ul>
+<li><a href="https://leap.site/">ホーム</a></li>
+<li><a href="https://leap.site/service">サービス</a></li>
+<li><a href="https://leap.site/about">About</a></li>
+</ul>
+<a href="https://app.leap.site/top" class="cta-button">無料で始める</a>
+</nav>
+</div>
+</header>
+
+<!-- パンくずリスト -->
+<div class="breadcrumb">
+<a href="https://leap.site/">ホーム</a>
+<span>›</span>
+<a href="#">ブログ</a>
+<span>›</span>
+<a href="#">知財戦略</a>
+<span>›</span>
+<span>海外展開の羅針盤！中小企業のためのブランド・技術の守り方完全ガイド</span>
+</div>
+
+<!-- 記事ヘッダー -->
+<div class="article-header">
+<span class="article-category">知財戦略</span>
+<h1 class="article-title">【知財戦略】海外展開の羅針盤！中小企業のためのブランド・技術の守り方完全ガイド</h1>
+<div class="article-meta">
+<span>📅 2025年12月16日</span>
+<span>⏱️ 読了時間: 12分</span>
+</div>
+<div class="author-info">
+<div class="author-avatar"></div>
+<div class="author-details">
+<h4>Leap編集部</h4>
+<p>海外進出のエキスパート</p>
+</div>
+</div>
+</div>
+
+<!-- アイキャッチ画像 -->
+<div class="featured-image">
+<img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=600&fit=crop" alt="知的財産戦略のイメージ - 書類と保護のコンセプト">
+</div>
+
+<!-- 記事コンテンツ -->
+<article class="article-content">
+<!-- 導入文 -->
+<p><strong>「いざ海外進出!」その大きな一歩を踏み出すとき、期待と共に多くの課題も見えてきますよね。特に、時間と情熱をかけて育ててきた自社のブランドや、独自開発した技術。これらが海外で無防備な状態になっていたら...?考えるだけで冷や汗が出ませんか?本記事では、商標権、特許権、意匠権といった知的財産の基礎知識から、国際的な権利取得の手続き、さらには模倣品対策や技術流出を防ぐ実践的なテクニックまで、海外展開を目指す中小企業の皆さんに今必要な情報をお届けします!</strong></p>
+
+<!-- 目次 -->
+<div class="table-of-contents">
+<h3>📑 目次</h3>
+<ul>
+<li><a href="#section1">なぜ海外での知財保護が重要なのか</a></li>
+<li><a href="#section2">知っておきたい!海外知的財産のキホン</a></li>
+<li><a href="#section3">手続きをスムーズに!国際的な権利取得の方法</a></li>
+<li><a href="#section4">模倣品からブランドを守る!実践的対策</a></li>
+<li><a href="#section5">技術流出を防ぐ!社内外の守りを固める方法</a></li>
+<li><a href="#section6">もしもの時に!海外での知的財産トラブル解決策</a></li>
+<li><a href="#section7">海外展開のパートナー!専門家や支援機関の活用</a></li>
+<li><a href="#section8">FAQ:海外の知的財産、ここが知りたい!</a></li>
+<li><a href="#section9">まとめ</a></li>
+</ul>
+</div>
+
+<!-- セクション1 -->
+<h2 id="section1">なぜ海外での知財保護が中小企業にとって重要なのか?🌍</h2>
+
+<p>海賊版が出回ってブランドイメージが低下したり、苦労して開発した技術が模倣されたりするリスクは、残念ながら海外では日常茶飯事です。特に中小企業の皆さんにとっては、このような被害は経営の根幹を揺るがしかねません。</p>
+
+<p>だからこそ、海外展開を成功させるためには、事業戦略と一体となった「知的財産戦略」が不可欠なんです。自社のブランドや技術を適切に保護することで、安心してグローバル市場に挑戦できる基盤が整います。</p>
+
+<div class="highlight-box">
+<h4>💡 ポイント</h4>
+<p>知的財産権は国ごとに独立しています(属地主義)。日本で権利を取得しても、海外では保護されません。進出先の国・地域で個別に権利を取得する必要があります。</p>
+</div>
+
+<!-- セクション2 -->
+<h2 id="section2">知っておきたい!海外知的財産のキホン💡</h2>
+
+<p>海外でビジネスを展開する上で、まず押さえておきたいのが知的財産権の基本です。日本の常識が海外では通用しないことも多いので、しっかり理解しておきましょう。知的財産権は、大きく分けて「産業財産権」と「著作権」に分類されますが、特に海外展開で重要になるのは前者です。</p>
+
+<h3>商標権:あなたのブランドを守る盾</h3>
+
+<p>商標権とは、商品やサービスに使用するネーミングやロゴマーク(ブランド)を保護する権利のことです。例えば、苦労して育てた自社ブランドの商品名やロゴが、海外で勝手に使われていたら、お客様は混乱しますし、ブランドの信用もガタ落ちですよね。</p>
+
+<p>商標権を取得することで、そのような事態を防ぎ、ブランド価値を守ることができます。権利期間は国によって異なりますが、多くは登録から10年で、更新すれば永続的に権利を維持できます。ただし、国によっては使用していないと権利が取り消されることもあるので注意が必要です。</p>
+
+<h3>特許権:独自の技術を守る砦</h3>
+
+<p>特許権は、新しい技術的なアイデア、つまり「発明」を保護する権利です。これには、製品の構造や製造方法などが含まれます。せっかく開発した画期的な技術も、特許で保護していなければ、海外の競合他社に簡単にマネされてしまうかもしれません。</p>
+
+<p>特許権を取得すれば、一定期間、その発明を独占的に実施(製造、販売など)する権利が得られます。権利期間は、原則として出願日から20年間です。</p>
+
+<h3>意匠権:デザインを守る鎧</h3>
+
+<p>意匠権は、製品の美的外観、つまりデザインを保護する権利です。商品の形状や模様、色彩などがこれにあたります。魅力的なデザインは、お客様の購買意欲を刺激し、ブランドイメージを向上させる重要な要素。意匠権は、この独自のデザインが模倣されるのを防ぎます。</p>
+
+<p>最近では、Webサイトの画面デザインや店舗の内装なども保護対象とする国が増えています。権利期間は国によって大きく異なり、例えば日本では出願日から最長25年です。</p>
+
+<!-- セクション3 -->
+<h2 id="section3">手続きをスムーズに!国際的な権利取得の方法とは?✈️</h2>
+
+<p>「海外で権利を取りたいけど、国ごとに手続きするのは大変そう...」そう思いますよね。でも大丈夫!複数の国へまとめて手続きできる便利な国際出願制度があるんです。これらを活用すれば、手間やコストを抑えつつ、効率的に権利保護を進められます。</p>
+
+<h3>商標の国際登録「マドリッド協定議定書(マドプロ)」とは?</h3>
+
+<p>マドプロは、商標を多くの国でまとめて保護したい場合に便利な制度です。まず日本の特許庁に出願(または登録)している商標があれば、それを基礎として、WIPO(世界知的所有権機関)国際事務局に一つの願書を提出するだけで、複数の加盟国を指定して保護を求めることができます。</p>
+
+<p>言語も英語でOK、手数料も一括で支払えるので、各国別に出願するより手続きがシンプルかつスピーディ。弊社顧客企業でも、このマドプロを活用してアジア各国へ主力ブランドの商標を一括出願し、時間と費用を大幅に削減できた事例があります。</p>
+
+<h3>特許の国際出願「特許協力条約(PCT)」とは?</h3>
+
+<p>PCT出願は、発明を多くの国で特許として保護したい場合に有効な手段です。一つの国際出願を提出することで、PCT加盟国全体に出願したのと同じ効果(出願日の確保)が得られます。</p>
+
+<p>その後、国際調査機関から特許性に関する見解が示されるので、それを見てから実際にどの国で権利取得を目指すか(国内段階へ移行するか)を、優先日から最長30ヶ月または31ヶ月後までに決めればOK。この制度を利用し、革新的な環境技術について、国際調査報告を参考にしながら戦略的に特許網を構築した例もあります。</p>
+
+<h3>意匠の国際登録「ハーグ協定」とは?</h3>
+
+<p>ハーグ協定に基づく国際登録制度は、製品デザインを多くの国で保護したい場合に役立ちます。WIPO国際事務局に一つの国際出願を提出すれば、複数の指定国で意匠権の保護を求めることが可能。最大100の意匠をまとめて出願できるのも魅力です(同じ国際意匠分類の場合)。</p>
+
+<p>ある企業では、多様なデザインバリエーションを持つ家具・インテリア雑貨約50種類を一度に国際出願し、手続きの大幅な簡素化と費用削減を実現しています。</p>
+
+<div class="highlight-box">
+<h4>⚠️ 注意事項</h4>
+<p>これらの国際出願制度は非常に便利ですが、あくまで「出願手続き」をサポートするもので、最終的に権利が認められるかは各国の審査次第です。私たちLeapのプラットフォームでは、海外代理店との契約においても知財に関する取り決めは重要と考えており、将来的に専門家相談の窓口案内なども含め、皆さまの海外展開をサポートできるよう努めてまいります。</p>
+</div>
+
+<!-- セクション4 -->
+<h2 id="section4">模倣品からブランドを守る!実践的対策🛡️</h2>
+
+<p>海外市場では、残念ながら模倣品(ニセモノ)のリスクがつきものです。丹精込めて築き上げたブランド価値やお客様の信頼を、模倣品によって一瞬にして傷つけられるわけにはいきませんよね。ここでは、中小企業の皆さまでも取り組める実践的な模倣品対策をご紹介します。</p>
+
+<h3>税関での水際対策:国境で模倣品をストップ</h3>
+
+<p>模倣品の国内流入を阻止する最前線が税関です。多くの国では、商標権などの知的財産権を税関に登録しておくことで、模倣品が発見された場合に輸入差止や没収といった措置を講じてもらえる制度があります。</p>
+
+<p>日本でもこの制度は活用されており、実際に多くの模倣品が差し止められています。進出先の国の税関制度を調べ、積極的に権利登録を行うことが、模倣品が市場に出回る前に食い止める有効な手段となります。</p>
+
+<h3>ECサイト・SNSでのオンライン対策:ネットの海賊版を見逃さない</h3>
+
+<p>近年、EコマースサイトやSNSは模倣品の主要な販売チャネルとなっています。自社ブランド名や製品名で定期的にオンライン検索を行い、不審な出品がないか監視しましょう。</p>
+
+<p>大手ECプラットフォームの多くは、ブランド登録制度や侵害品申告システムを設けています。これらを活用し、模倣品を発見したら速やかに削除要請を行うことが重要です。</p>
+
+<h3>法的措置と最新技術:守りを固める最終手段</h3>
+
+<p>模倣品を発見し、税関やプラットフォームへの対応だけでは不十分な場合、警告書の送付や訴訟といった法的措置も検討します。また、製品自体に真贋判定技術を組み込むことも有効です。</p>
+
+<p>例えば、特殊なQRコードやRFIDタグ、ホログラムなどを製品やパッケージに付与することで、消費者や流通業者が正規品かどうかを簡単に確認できるようにするのです。オーストラリアの動物用医薬品メーカーDermcare-Vet社は、中国市場での模倣品対策として、顧客が真正性を確認できる偽造防止ステッカーを導入し、成果を上げています。</p>
+
+<!-- セクション5 -->
+<h2 id="section5">技術流出を防ぐ!社内外の守りを固める方法とは?🔒</h2>
+
+<p>企業の競争力の源泉ともいえる独自技術。これが海外の競合他社に流出してしまったら...。その損害は計り知れません。技術流出は、サイバー攻撃だけでなく、従業員や取引先といった内部関係者を通じて発生することも多いため、多角的な対策が必要です。</p>
+
+<h3>契約による保護:秘密保持契約(NDA)の重要ポイント</h3>
+
+<p>技術情報を他社と共有する際には、まず秘密保持契約(NDA)を締結することが基本です。NDAでは、どの情報が秘密で、何のために使うのか、いつまで秘密を守るのか、違反したらどうなるのか、などを明確に定めます。</p>
+
+<p>特に中国企業との取引では、秘密保持(Non-Disclosure)に加え、不正使用禁止(Non-Use)と迂回禁止(Non-Circumvention)を定めた「NNN契約」の締結が強く推奨されています。私たちLeapのプラットフォームでは、海外代理店との契約締結もサポート範囲。契約書テンプレートのご提供や、専門家との連携を通じて、皆さまの大切な技術情報が守られるようお手伝いできればと考えています。</p>
+
+<h3>社内管理体制の構築と従業員教育</h3>
+
+<p>技術流出の多くは人的要因によるもの。まずは社内で「守るべき情報」を特定し、アクセスできる人を限定します。そして、秘密情報の取り扱いに関する社内ルールを整備し、全従業員にその重要性を理解してもらうための教育を徹底しましょう。</p>
+
+<p>入退社時の情報管理も重要です。経済産業省などが発行している「技術流出対策ガイダンス」なども参考に、自社に合った管理体制を構築してください。</p>
+
+<h3>サイバーセキュリティとアクセス管理</h3>
+
+<p>研究開発データや設計図面といったデジタル情報は、サイバー攻撃の格好の標的です。「うちは中小企業だから大丈夫」という油断は禁物。多要素認証の導入、データの暗号化、セキュリティソフトの最新化といった基本的な対策はもちろん、重要な情報へのアクセス権限を最小限に絞るなどのアクセス管理も徹底しましょう。</p>
+
+<p>海外拠点や共同研究先とのデータ共有には、VPNなど安全な通信経路を利用することも忘れずに。</p>
+
+<!-- セクション6 -->
+<h2 id="section6">もしもの時に!海外での知的財産トラブル解決策は?🤝</h2>
+
+<p>どんなに気をつけていても、海外で知的財産に関するトラブルに巻き込まれてしまう可能性はゼロではありません。そんな時、慌てずに対処できるよう、解決策の選択肢を知っておきましょう。</p>
+
+<h3>主要国・地域における紛争の傾向と注意点</h3>
+
+<p>知的財産権は国ごとに独立しているため(属地主義)、紛争解決も国によって進め方が異なります。</p>
+
+<ul>
+<li><strong>米国:</strong> 特許訴訟は高額な費用がかかることで知られますが、強力な証拠開示制度があります。</li>
+<li><strong>中国:</strong> 近年、知財保護制度が急速に整備され、専門の知財裁判所も設置されています。ただし、悪意のある商標の先取り出願には依然として注意が必要です。</li>
+<li><strong>EU:</strong> EU全体で有効な権利制度があり、近年では統一特許裁判所(UPC)も運用開始しています。</li>
+<li><strong>ASEAN諸国:</strong> 国によって制度の成熟度にばらつきがあります。</li>
+</ul>
+
+<p>各国・地域の法制度や実務は常に変化するため、最新情報の収集と現地専門家との連携が不可欠です。</p>
+
+<h3>国際仲裁・調停(ADR)のメリット・デメリット</h3>
+
+<p>国境を越える知財紛争では、裁判以外の解決手段として、国際仲裁や調停(ADR)も有効です。</p>
+
+<ul>
+<li><strong>仲裁:</strong> 中立的な第三者(仲裁人)が判断を下し、その判断に当事者は拘束されます。非公開で専門性の高い判断が期待でき、ニューヨーク条約加盟国間では判断の執行も比較的容易です。</li>
+<li><strong>調停:</strong> 中立的な第三者(調停人)が当事者間の話し合いを促し、和解を支援します。費用が比較的安く、迅速な解決や当事者間のビジネス関係維持も期待できます。</li>
+</ul>
+
+<p>WIPO(世界知的所有権機関)の仲裁・調停センターなどは、知財紛争に特化したADRサービスを提供しており、中小企業の利用も多いです。</p>
+
+<div class="highlight-box">
+<h4>📌 事例紹介</h4>
+<p>世界的に有名なApple対Samsungのスマートフォン特許訴訟は、各国で泥沼の戦いが繰り広げられましたが、最終的には和解に至りました。これは、グローバルなIP紛争がいかに複雑でコストがかかるか、そして最終的な解決における交渉の重要性を示しています。また、WIPOの調停を通じて、アジアと欧州企業間の特許ライセンス交渉が円満に解決した事例など、ADRの有効性を示すケースも多数報告されています。</p>
+</div>
+
+<!-- セクション7 -->
+<h2 id="section7">海外展開のパートナー!専門家や支援機関を上手に活用しよう🤝</h2>
+
+<p>海外での知的財産戦略を自社だけで進めるのは大変です。信頼できる専門家や公的支援機関を上手に活用して、万全の体制で臨みましょう。</p>
+
+<h3>弁理士・弁護士など外部専門家との連携ポイント</h3>
+
+<p>現地の法律や実務に詳しい弁理士や弁護士は、権利取得から紛争解決まで、海外での知財戦略に欠かせないパートナーです。選ぶ際は、専門分野や経験はもちろん、国際的なネットワーク、コミュニケーション能力、そして費用対効果などをしっかり確認しましょう。</p>
+
+<p>何よりも、皆さまのビジネスを理解し、共に戦略を考えてくれる専門家を見つけることが大切です。</p>
+
+<h3>JETRO、INPITなど支援機関の活用法</h3>
+
+<p>日本貿易振興機構(JETRO)や工業所有権情報・研修館(INPIT)といった公的機関は、海外展開を目指す日本企業、特に中小企業向けに手厚い知財支援サービスを提供しています。</p>
+
+<p>海外の知財制度に関する情報提供、セミナー開催、海外出願費用の助成、模倣品対策支援、専門家相談など、内容は多岐にわたります。例えばJETROでは、海外での模倣品調査や警告書作成費用の一部を助成する制度などもあります。これらの支援を積極的に活用し、コストを抑えながら効果的な知財戦略を進めましょう。</p>
+
+<h3>国際契約における知的財産条項のチェックポイント</h3>
+
+<p>海外企業と代理店契約やライセンス契約などを結ぶ際、知的財産に関する条項は非常に重要です。権利の帰属、ライセンスの範囲、秘密保持義務、権利侵害時の対応などを明確に定めておかないと、後々大きなトラブルに発展しかねません。</p>
+
+<p>特に代理店に商標出願を任せてしまうと、権利が代理店名義になってしまうリスクも。契約書は必ず専門家にレビューしてもらい、不利な内容になっていないか、自社の権利がしっかり守られる内容になっているかを確認しましょう。</p>
+
+<!-- セクション8 -->
+<h2 id="section8">【FAQ】海外の知的財産、ここが知りたい!❓</h2>
+
+<h3>Q1: 海外で知的財産権を取得するのに、どれくらいの費用と時間がかかりますか?</h3>
+
+<p>A1: 国や権利の種類(商標、特許、意匠)、そして国際出願制度を利用するかどうかで大きく異なります。例えば、マドプロを利用した商標の国際登録なら、複数の国をまとめて手続きできるため、各国別に出願するより費用や時間を抑えられる傾向にあります。特許の場合は、翻訳費用や現地代理人費用も考慮する必要があり、一般的に商標よりも高額かつ長期間になることが多いです。まずは専門家(弁理士など)に相談し、具体的な事業計画に基づいて見積もりを取ることをお勧めします。JETROなどの助成金制度もチェックしてみましょう。</p>
+
+<h3>Q2: 中小企業でも、本当に海外での知財対策は必要ですか?リソースが限られているのですが...</h3>
+
+<p>A2: はい、必要不可欠です。むしろ、リソースが限られている中小企業だからこそ、ブランドや技術といった「見えない資産」を知的財産権でしっかり守り、模倣品や技術流出による無用な損失を防ぐことが経営安定の鍵となります。全てを一度に行う必要はありません。事業の優先順位に合わせて、まずは最も重要な市場、最も重要な権利から対策を始めましょう。国際出願制度や公的支援機関のサポートを賢く利用すれば、コストを抑えつつ効果的な対策が可能です。</p>
+
+<h3>Q3: 海外の代理店に知的財産管理を任せても大丈夫でしょうか?</h3>
+
+<p>A3: 基本的にはお勧めしません。知的財産権は自社名義で取得・管理するのが鉄則です。代理店に任せてしまうと、契約終了時に権利を返してもらえなかったり、代理店が勝手に権利を使ってしまったりするリスクがあります。代理店契約を結ぶ際には、知的財産権の取り扱いについて明確な条項を盛り込み、権利の所在をはっきりさせておくことが重要です。Leapの提供するSaaSプラットフォームでは、海外代理店との契約管理もサポートしており、このような重要なポイントを見落とさないためのお手伝いが可能です。</p>
+
+<!-- まとめ -->
+<h2 id="section9">まとめ:知財戦略で、海外ビジネスを成功させよう!🚀</h2>
+
+<p>海外でのブランド保護や技術防衛は、グローバル市場で勝ち抜くために避けては通れない道です。商標権、特許権、意匠権といった知的財産は、皆さまの大切な経営資源。これらを戦略的に保護・活用することが、海外展開の成功確率を格段に高めます。</p>
+
+<p>国際的な権利取得制度を賢く利用し、模倣品対策や技術流出防止策を多層的に講じる。そして、万が一の紛争時には、訴訟だけでなくADR(裁判外紛争解決手続)も視野に入れる。これらを実行するためには、専門家や支援機関との連携が不可欠です。</p>
+
+<p>私たち株式会社Leapは、海外代理店を通じた販路開拓・拡大を支援するSaaSプラットフォームをご提供しています。代理店のリストアップから交渉、契約、そして契約後のパフォーマンス管理まで、海外営業のあらゆるフェーズをサポートし、皆さまの海外事業を加速させるお手伝いをいたします。本記事でご紹介したような知的財産戦略の実行においても、Leapのプラットフォームは、代理店とのスムーズな情報共有や契約管理を通じて、間接的に貢献できます。</p>
+
+<p>確かな知財戦略を携えて、自信を持って世界のマーケットへ飛び出しましょう!Leapのサービスにご興味をお持ちいただけましたら、ぜひ弊社のSaaS紹介ページをご覧ください。皆さまの海外展開を、全力で応援します!</p>
+
+<div class="highlight-box">
+<h4>📚 お役立ち参考文献</h4>
+<p>実務で役に立つサイトをまとめました。ご参考までどうぞ。</p>
+<ul>
+<li>スッキリわかる知的財産権 | 経済産業省 特許庁</li>
+<li>マドリッド制度 -- 商標の国際登録制度 - WIPO</li>
+<li>PCT国際出願制度の概要 | 経済産業省 特許庁</li>
+<li>国際意匠登録出願の流れ | 経済産業省 特許庁</li>
+<li>税関における知的財産侵害物品の差止状況 : 財務省</li>
+<li>技術流出対策ガイダンス 第1版 - 経済産業省</li>
+<li>WIPO仲裁・調停による知的財産権紛争の解決 - WIPO</li>
+<li>JETROイノベーション・知的財産部 - 知財支援と海外展開支援</li>
+<li>[INPIT] 知財戦略エキスパート 支援活動と事例のご紹介</li>
+</ul>
+</div>
+</article>
+
+<!-- タグ -->
+<div class="article-tags">
+<div class="tags-container">
+<a href="#" class="tag">知財戦略</a>
+<a href="#" class="tag">海外進出マニュアル</a>
+<a href="#" class="tag">ブランド保護</a>
+<a href="#" class="tag">特許・商標</a>
+<a href="#" class="tag">模倣品対策</a>
+</div>
+</div>
+
+<!-- シェアセクション -->
+<div class="share-section">
+<h3>この記事をシェアする</h3>
+<div class="share-buttons">
+<button class="share-btn twitter" onclick="shareOnTwitter()" title="Xでシェア">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+</button>
+<button class="share-btn facebook" onclick="shareOnFacebook()" title="Facebookでシェア">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 3.667h-3.533v7.98H9.101z"/></svg>
+</button>
+<button class="share-btn linkedin" onclick="shareOnLinkedIn()" title="LinkedInでシェア">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+</button>
+<button class="share-btn copy" onclick="copyLink()" title="リンクをコピー">🔗</button>
+</div>
+</div>
+
+<!-- CTAセクション -->
+<div class="cta-section">
+<h2>Leapで海外代理店開拓を始めませんか?</h2>
+<p>1万社以上の代理店データベースと強力な管理ツールで、あなたの海外展開を加速させます</p>
+<a href="https://app.leap.site/top" class="cta-button">無料で始める</a>
+</div>
+
+<!-- 関連記事 -->
+<section class="related-posts">
+<h2>関連記事</h2>
+<div class="related-grid">
+<a href="#" class="related-card">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop" alt="海外代理店契約のポイント">
+<div class="related-card-content">
+<h3>海外代理店契約で失敗しないための5つのポイント</h3>
+<p>代理店契約を結ぶ際に必ず押さえておくべき重要事項を解説します。</p>
+</div>
+</a>
+<a href="#" class="related-card">
+<img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=400&h=250&fit=crop" alt="海外市場調査">
+<div class="related-card-content">
+<h3>海外市場調査の進め方:成功する市場選定のステップ</h3>
+<p>効果的な市場調査で、御社に最適な海外市場を見つけましょう。</p>
+</div>
+</a>
+<a href="#" class="related-card">
+<img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=400&h=250&fit=crop" alt="輸出規制">
+<div class="related-card-content">
+<h3>輸出規制を正しく理解する:コンプライアンスの基礎知識</h3>
+<p>海外展開で避けて通れない輸出規制について、わかりやすく解説します。</p>
+</div>
+</a>
+</div>
+</section>
+
+<!-- フッター -->
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h3>サービス</h3>
+<ul>
+<li><a href="https://app.leap.site/top">Leapプラットフォーム</a></li>
+<li><a href="https://app.leap.site/top">無料で始める</a></li>
+<li><a href="https://leap.site/">サービス紹介</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>企業情報</h3>
+<ul>
+<li><a href="https://leap.site/about">About</a></li>
+<li><a href="https://leap.site/">会社概要</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>法務情報</h3>
+<ul>
+<li><a href="https://leap.site/service/terms">利用規約</a></li>
+<li><a href="https://leap.site/service/privacypolicy">プライバシーポリシー</a></li>
+<li><a href="https://leap.site/service/特定商取引法に基づく表示">特定商取引法に基づく表示</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h3>お問い合わせ</h3>
+<ul>
+<li><a href="mailto:corporate@leap.site">corporate@leap.site</a></li>
+<li><a href="tel:070-4032-3935">070-4032-3935</a></li>
+<li>神奈川県横浜市神奈川区金港町5-14<br>クアドリフォリオ8階</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2024 株式会社Leap. All rights reserved.</p>
+</div>
+</footer>
+
+<script>
+// ハンバーガーメニューの機能
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', function() {
+nav.classList.toggle('active');
+});
+
+// メニュー外をクリックしたら閉じる
+document.addEventListener('click', function(event) {
+if (!event.target.closest('header')) {
+nav.classList.remove('active');
+}
+});
+
+// シェア機能
+function shareOnTwitter() {
+const url = encodeURIComponent(window.location.href);
+const text = encodeURIComponent(document.title);
+window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+}
+
+function shareOnFacebook() {
+const url = encodeURIComponent(window.location.href);
+window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+}
+
+function shareOnLinkedIn() {
+const url = encodeURIComponent(window.location.href);
+window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+}
+
+function copyLink() {
+navigator.clipboard.writeText(window.location.href).then(function() {
+alert('リンクをコピーしました!');
+}, function() {
+alert('リンクのコピーに失敗しました');
+});
+}
+
+// スムーズスクロール
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+</script>
+</body>
+</html>

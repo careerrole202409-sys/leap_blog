@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ - 株式会社Leap | 海外代理店営業の伴走ツール</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: #f7fafc;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .cta-button {
+            background: white;
+            color: #C10033;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            border: 2px solid white;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* カテゴリーフィルター */
+        .category-filter {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .category-btn {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #4a5568;
+            transition: all 0.3s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+            color: white;
+            border-color: #C10033;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(193, 0, 51, 0.2);
+        }
+
+        /* メインコンテナ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* 注目記事 */
+        .featured-post {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .featured-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .featured-post img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 2rem;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(193, 0, 51, 0.3);
+        }
+
+        .featured-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        .featured-content p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* 記事グリッド */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: #718096;
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #1a202c;
+            line-height: 1.4;
+        }
+
+        .blog-card p {
+            color: #4a5568;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: #FFF0F3;
+            color: #C10033;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: #C10033;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: gap 0.3s;
+        }
+
+        .read-more:hover {
+            gap: 0.5rem;
+        }
+
+        /* ページネーション */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .pagination button {
+            padding: 0.8rem 1.2rem;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #4a5568;
+            transition: all 0.3s;
+        }
+
+        .pagination button:hover,
+        .pagination button.active {
+            background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+            color: white;
+            border-color: #C10033;
+        }
+
+        /* フッター */
+        footer {
+            background: #2d2d2d;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #C10033;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #4a5568;
+            color: #a0aec0;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background: linear-gradient(135deg, #C10033 0%, #8B0024 100%);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 0;
+                transition: left 0.3s ease;
+                z-index: 999;
+            }
+
+            nav.active {
+                left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                width: 100%;
+            }
+
+            nav ul li {
+                width: 100%;
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            nav ul li a {
+                font-size: 1.1rem;
+                display: block;
+            }
+
+            .cta-button {
+                margin-top: 1.5rem;
+                text-align: center;
+                display: block;
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-filter {
+                justify-content: flex-start;
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="header-container">
+            <a href="https://leap.site/" class="logo">Leap</a>
+            <button class="menu-toggle" aria-label="メニュー">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="https://leap.site/">ホーム</a></li>
+                    <li><a href="https://leap.site/service">サービス</a></li>
+                    <li><a href="https://leap.site/about">About</a></li>
+                </ul>
+                <a href="https://app.leap.site/top" class="cta-button">無料で始める</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero">
+        <h1>海外進出を成功に導く実践知識とヒント</h1>
+        <p>代理店開拓のノウハウから市場分析まで、あなたのビジネスを加速させる情報をお届けします</p>
+    </section>
+
+    <!-- カテゴリーフィルター -->
+    <div class="category-filter">
+        <button class="category-btn active">すべて</button>
+        <button class="category-btn">海外進出マニュアル</button>
+        <button class="category-btn">国地域別情報</button>
+        <button class="category-btn">ツール活用</button>
+        <button class="category-btn">成功事例</button>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="container">
+        <!-- 注目記事 -->
+        <article class="featured-post">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=400&fit=crop" alt="海外展開を成功させる代理店選定のポイント">
+            <div class="featured-content">
+                <span class="featured-badge">注目記事</span>
+                <h2>なぜ今、日本の中小企業が海外市場を目指すべきなのか</h2>
+                <p>日本企業の海外展開において、現地代理店の開拓とマネジメントは最大の課題の一つです。本記事では、中小企業が海外市場で成功するための戦略と、代理店選定の具体的なステップを解説します。</p>
+                <div class="blog-meta">
+                    <span>📅 2025年12月1日</span>
+                    <span>👤 Leap編集部</span>
+                    <span>⏱️ 8分で読めます</span>
+                </div>
+                <div class="blog-tags">
+                    <span class="tag">海外進出マニュアル</span>
+                    <span class="tag">国地域別情報</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- ブログ記事グリッド -->
+        <div class="blog-grid">
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="代理店データベース活用法">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>📅 2025年11月28日</span>
+                        <span>⏱️ 5分で読めます</span>
+                    </div>
+                    <h3>代理店データベース1万社突破!効果的な活用方法とは</h3>
+                    <p>Leapの代理店データベースが1万社を突破しました。膨大なデータの中から、自社に最適な代理店を見つける方法を具体的にご紹介します。</p>
+                    <div class="blog-tags">
+                        <span class="tag">ツール活用</span>
+                        <span class="tag">海外進出マニュアル</span>
+                    </div>
+                    <a href="#" class="read-more">続きを読む →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=400&h=250&fit=crop" alt="海外代理店とのコミュニケーション">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>📅 2025年11月25日</span>
+                        <span>⏱️ 6分で読めます</span>
+                    </div>
+                    <h3>海外代理店とのコミュニケーションを円滑にする5つのコツ</h3>
+                    <p>言語や文化の違いを乗り越え、海外代理店と良好な関係を築くための実践的なコミュニケーション術をお伝えします。</p>
+                    <div class="blog-tags">
+                        <span class="tag">海外進出マニュアル</span>
+                        <span class="tag">ツール活用</span>
+                    </div>
+                    <a href="#" class="read-more">続きを読む →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" alt="アジア市場分析レポート">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>📅 2025年11月22日</span>
+                        <span>⏱️ 10分で読めます</span>
+                    </div>
+                    <h3>2025年アジア市場トレンド分析:今注目すべき市場とは</h3>
+                    <p>急成長を続けるアジア市場の最新トレンドを分析。日本企業にとってチャンスのある市場を詳しく解説します。</p>
+                    <div class="blog-tags">
+                        <span class="tag">国地域別情報</span>
+                        <span class="tag">海外進出マニュアル</span>
+                    </div>
+                    <a href="#" class="read-more">続きを読む →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=250&fit=crop" alt="代理店マネジメントの課題">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>📅 2025年11月19日</span>
+                        <span>⏱️ 7分で読めます</span>
+                    </div>
+                    <h3>代理店マネジメントの属人化を防ぐ、組織的アプローチ</h3>
+                    <p>代理店とのやり取りが特定の担当者に依存してしまう問題を解決。組織全体で情報を共有し、効率的にマネジメントする方法とは。</p>
+                    <div class="blog-tags">
+                        <span class="tag">ツール活用</span>
+                        <span class="tag">海外進出マニュアル</span>
+                    </div>
+                    <a href="#" class="read-more">続きを読む →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=250&fit=crop" alt="香港市場への進出">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>📅 2025年11月15日</span>
+                        <span>⏱️ 6分で読めます</span>
+                    </div>
+                    <h3>中国市場への入口、香港を活用した展開戦略</h3>
+                    <p>中国市場への直接進出はハードルが高い。しかし香港を経由することで、リスクを抑えながら中華圏へアクセスする方法があります。</p>
+                    <div class="blog-tags">
+                        <span class="tag">国地域別情報</span>
+                        <span class="tag">海外進出マニュアル</span>
+                    </div>
+                    <a href="#" class="read-more">続きを読む →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=250&fit=crop" alt="Leapツール活用事例">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span>📅 2025年11月12日</span>
+                        <span>⏱️ 5分で読めます</span>
+                    </div>
+                    <h3>【導入事例】製造業A社がLeapで達成した3ヶ月の成果</h3>
+                    <p>代理店開拓に悩んでいた製造業A社。Leapを導入してわずか3ヶ月で、5社との商談に成功した秘訣をご紹介します。</p>
+                    <div class="blog-tags">
+                        <span class="tag">成功事例</span>
+                        <span class="tag">ツール活用</span>
+                    </div>
+                    <a href="#" class="read-more">続きを読む →</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- ページネーション -->
+        <div class="pagination">
+            <button>← 前へ</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>次へ →</button>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>サービス</h3>
+                <ul>
+                    <li><a href="https://app.leap.site/top">Leapプラットフォーム</a></li>
+                    <li><a href="https://app.leap.site/top">無料で始める</a></li>
+                    <li><a href="https://leap.site/">サービス紹介</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>企業情報</h3>
+                <ul>
+                    <li><a href="https://leap.site/about">About</a></li>
+                    <li><a href="https://leap.site/">会社概要</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>法務情報</h3>
+                <ul>
+                    <li><a href="https://leap.site/service/terms">利用規約</a></li>
+                    <li><a href="https://leap.site/service/privacypolicy">プライバシーポリシー</a></li>
+                    <li><a href="https://leap.site/service/特定商取引法に基づく表示">特定商取引法に基づく表示</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>お問い合わせ</h3>
+                <ul>
+                    <li><a href="mailto:corporate@leap.site">corporate@leap.site</a></li>
+                    <li><a href="tel:070-4032-3935">070-4032-3935</a></li>
+                    <li>神奈川県横浜市神奈川区金港町5-14<br>クアドリフォリオ8階</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 株式会社Leap. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ハンバーガーメニューの機能
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+
+        // メニュー外をクリックしたら閉じる
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('header')) {
+                nav.classList.remove('active');
+            }
+        });
+
+        // カテゴリーフィルターの機能
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // ページネーションの機能
+        document.querySelectorAll('.pagination button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (!this.textContent.includes('前へ') && !this.textContent.includes('次へ')) {
+                    document.querySelectorAll('.pagination button').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
